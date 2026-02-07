@@ -27,9 +27,11 @@ Optionals
 
 
 
-## ⌨️ Keybindings
+Keybindings
+============
 
-### 🖥 Basic Applications
+
+Basic Applications
 
 | Shortcut            | Action                              |
 |---------------------|--------------------------------------|
@@ -41,7 +43,7 @@ Optionals
 
 ---
 
-### 🧭 Focus Navigation (Directional)
+Focus Navigation (Directional)
 
 | Shortcut                  | Action              |
 |---------------------------|--------------------|
@@ -52,7 +54,7 @@ Optionals
 
 ---
 
-### 🗂 Persistent Workspaces
+Persistent Workspaces
 
 Workspaces **1–4** are configured as persistent.
 
@@ -65,7 +67,7 @@ Workspaces **1–4** are configured as persistent.
 
 ---
 
-### 🪟 Move Windows (Floating or Tiled)
+Move Windows (Floating or Tiled)
 
 | Shortcut                    | Action             |
 |-----------------------------|-------------------|
@@ -76,7 +78,7 @@ Workspaces **1–4** are configured as persistent.
 
 ---
 
-### 🔄 Focus Switching (Alternative Method)
+Focus Switching (Alternative Method)
 
 | Shortcut                    | Action              |
 |-----------------------------|--------------------|
@@ -84,6 +86,8 @@ Workspaces **1–4** are configured as persistent.
 | SUPER + SHIFT + →           | Focus right window  |
 | SUPER + SHIFT + ↑           | Focus upper window  |
 | SUPER + SHIFT + ↓           | Focus lower window  |
+
+
 
 
 
