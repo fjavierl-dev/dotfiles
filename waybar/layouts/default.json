@@ -1,0 +1,11 @@
+{
+  "left": ["custom/ws-grid"],
+  "center": [],
+  "right": [
+    "network",
+    "tray",
+    "clock",
+    "custom/settings",
+    "custom/power"
+  ]
+}
