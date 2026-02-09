@@ -2,9 +2,12 @@
 SCRIPT_DIR="$(dirname "$0")"
 
 
-option=$(printf "Personalization\nWorkspaces\nWallpaper Selection\nChange Rofi Theme\nAbout" | rofi -dmenu -p "Settings")
+option=$(printf "Keybindings\nPersonalization\nWorkspaces\nWallpaper Selection\nChange Rofi Theme\nAbout" | rofi -dmenu -p "Settings")
 
 case "$option" in
+  Keybindings)
+  "$SCRIPT_DIR/keybindings-menu.sh"
+    ;;
   Personalization)
    "$SCRIPT_DIR/personalization-menu.sh"
     ;;

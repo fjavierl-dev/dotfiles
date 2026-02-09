@@ -2,9 +2,12 @@
 SCRIPT_DIR="$(dirname "$0")"
 
 
-option=$(printf "Personalization\nWorkspaces\nWallpaper Selecti>
+option=$(printf "Keybindings\nPersonalization\nWorkspaces\nWallpaper Selecti>
 
 case "$option" in
+  Keybindings)
+    "$SCRIPT_DIR/keybindings-menu.sh"
+    ;;
   Personalization)
    "$SCRIPT_DIR/personalization-menu.sh"
     ;;
@@ -17,7 +20,7 @@ case "$option" in
   "Change Rofi Theme")
     "$SCRIPT_DIR/rofi-theme-selector.sh"
     ;;
-"About")
+  "About")
     "$SCRIPT_DIR/menu-about.sh"
     ;;
 esac

@@ -1,6 +1,6 @@
 /* Fondo general de la barra */
 window#waybar {
-  background: rgba(20, 20, 20, 0.55);
+  background: rgba(20, 20, 20, 0.4);
 }
 
 /* IMPORTANTE: nada más debe tener fondo por defecto */
@@ -14,7 +14,7 @@ window#waybar {
 
 /* SOLO el activo se resalta */
 #workspaces button.active {
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.4);
   color: #ffffff;
   border-radius: 6px;
 }
@@ -56,7 +56,7 @@ window#waybar {
 }
 
 #custom-power:hover {
-  background: rgba(243, 139, 168, 0.2);
+  background: rgba(243, 139, 168, 0.4);
   border-radius: 6px;
 }
 
@@ -72,15 +72,15 @@ window#waybar {
   padding: 0;
 
   border-radius: 2px;
-  background: rgba(255,255,255,0.25);
+  background: rgba(255,255,255, 0.4);
 }
 
 /* activo */
 #custom-ws-grid button.active {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255, 0.4);
 }
 
 /* hover */
 #custom-ws-grid button:hover {
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255, 0.4);
 }
