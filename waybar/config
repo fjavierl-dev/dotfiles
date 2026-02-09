@@ -3,15 +3,22 @@
   "position": "top",
   "height": 18,
 
-  "modules-left": ["custom/ws-grid",         ],
+  "modules-left": ["custom/ws-grid",          ],
   "modules-center": [],
   "modules-right": [
-    "bluetooth",
     "network",
+    "tray",
     "clock",
     "custom/settings",
     "custom/power"
   ],
+
+
+
+  "tray": {
+    "spacing": 2
+  },
+
 
   "custom/ws-grid": {
     "exec": "~/.config/waybar/scripts/ws-grid.sh",
@@ -64,20 +71,14 @@
     "on-click": "~/.config/hypr/scripts/wallpaper-picker.sh"
   },
 
-  "bluetooth": {
-    "format": "BT {status}",
-    "format-connected": "BT {device_alias}",
-    "format-disabled": "BT off",
-    "on-click": "blueman-manager"
-  },
 
   "network": {
     "format-wifi": "{essid}",
     "format-ethernet": "LAN",
     "format-disconnected": "No WiFi",
-    "tooltip-format": "{ifname} via {gwaddr}",
-    "on-click": "nm-connection-editor"
+    "tooltip-format": "{ifname} via {gwaddr}"
   },
+
 
   "custom/power": {
     "format": "",
