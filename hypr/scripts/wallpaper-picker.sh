@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-WALLDIR="$HOME/Imágenes/wallpapers"
+WALLDIR="$HOME/.config/hypr/wallpapers"
 STATE="$HOME/.config/hypr/current_wallpaper"
 
 mkdir -p "$WALLDIR"
@@ -13,8 +13,10 @@ CHOICE=$(zenity --file-selection \
 
 [ -z "$CHOICE" ] && exit 0
 
-# Guardar selección
-echo "$CHOICE" > "$STATE"
+# Guardar selección (ruta relativa)
+RELATIVE_PATH="${CHOICE#$WALLDIR/}"
+echo "$RELATIVE_PATH" > "$STATE"
+
 
 # Aplicar wallpaper
 swww img "$CHOICE" --transition-type any

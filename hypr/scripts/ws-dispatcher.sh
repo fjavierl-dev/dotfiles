@@ -3,6 +3,16 @@
 STATE="$HOME/.config/waybar/state/ws_mode"
 DIR="$1"
 
+
+# ===== BLOQUEO MODO SINGLE =====
+if ! grep -q "persistent:true" "$HOME/.config/hypr/workspaces.conf"; then
+  exit 0
+fi
+# ===============================
+
+
+
+
 # workspace actual
 CUR=$(hyprctl activeworkspace -j | jq '.id')
 

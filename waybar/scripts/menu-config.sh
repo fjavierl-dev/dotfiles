@@ -1,12 +1,26 @@
 #!/usr/bin/env bash
+SCRIPT_DIR="$(dirname "$0")"
 
-option=$(printf "Workspaces\nWallpaper Selection" | rofi -dmenu -p "Settings")
+
+option=$(printf "Keybindings\nPersonalization\nWorkspaces\nWallpaper Selecti>
 
 case "$option" in
+  Keybindings)
+    "$SCRIPT_DIR/keybindings-menu.sh"
+    ;;
+  Personalization)
+   "$SCRIPT_DIR/personalization-menu.sh"
+    ;;
   "Workspaces")
-    ~/.config/waybar/scripts/menu-workspaces.sh
+    "$SCRIPT_DIR/menu-workspaces.sh"
     ;;
   "Wallpaper Selection")
-    ~/.config/waybar/scripts/menu-wallpaper.sh
+    "$SCRIPT_DIR/menu-wallpaper.sh"
+    ;;
+  "Change Rofi Theme")
+    "$SCRIPT_DIR/rofi-theme-selector.sh"
+    ;;
+  "About")
+    "$SCRIPT_DIR/menu-about.sh"
     ;;
 esac
