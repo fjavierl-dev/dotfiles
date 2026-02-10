@@ -110,5 +110,34 @@ systemctl --user enable swww
 
 echo
 
+
+# ==============================
+# 5. Download Themes
+# ==============================
+
+echo "==> Installing Kitty themes..."
+
+mkdir -p "$HOME/.config/kitty"
+
+if [ ! -d "$HOME/.config/kitty/kitty-themes" ]; then
+    git clone https://github.com/dexpota/kitty-themes "$HOME/.config/kitty/kitty-themes"
+    echo "==> Kitty themes installed."
+else
+    echo "==> Kitty themes already exist. Skipping."
+fi
+
+echo
+echo "==> Installing Rofi themes..."
+
+if [ ! -d "$HOME/.config/rofi-themes-collection" ]; then
+    git clone https://github.com/lr-tech/rofi-themes-collection.git "$HOME/.config/rofi-themes-collection"
+    echo "==> Rofi themes installed."
+else
+    echo "==> Rofi themes already exist. Skipping."
+fi
+
+echo
+
+
 echo "==> Installation complete."
 echo "==> Reboot or start Hyprland to apply changes."
