@@ -44,4 +44,8 @@ mkdir -p "$HOME/.config"
 echo "==> Copying Waybar config..."
 cp -r "$REPO_DIR/.config/waybar" "$HOME/.config/"
 
+
+
+
+
 echo "==> Installation complete."

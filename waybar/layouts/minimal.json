@@ -1,5 +1,17 @@
 {
   "left": [],
   "center": ["clock"],
-  "right": ["custom/settings", "custom/power"]
+  "right": [
+    "network",
+    "pulseaudio",
+    "custom/settings",
+    "custom/power"
+  ],
+
+  "pulseaudio": {
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "format": "{volume}% ",
+    "format-muted": ""
+  }
 }

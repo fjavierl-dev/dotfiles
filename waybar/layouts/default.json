@@ -4,8 +4,14 @@
   "right": [
     "network",
     "tray",
+    "pulseaudio",
     "clock",
     "custom/settings",
     "custom/power"
-  ]
+  ],"pulseaudio": {
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "format": "{volume}% ",
+    "format-muted": ""
+  }
 }

@@ -1,5 +1,17 @@
 {
   "left": ["custom/ws-grid"],
   "center": ["clock"],
-  "right": ["network", "tray", "custom/settings", "custom/power"]
+  "right": [
+    "network",
+    "tray",
+    "pulseaudio",
+    "custom/settings",
+    "custom/power"
+  ],
+  "pulseaudio": {
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "format": "{volume}% ",
+    "format-muted": ""
+  }
 }

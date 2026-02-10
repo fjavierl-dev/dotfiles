@@ -4,9 +4,15 @@
   "right": [
     "network",
     "tray",
+    "pulseaudio",
     "custom/rofi-theme",
     "custom/wallpaper",
     "custom/settings",
     "custom/power"
-  ]
+  ],"pulseaudio": {
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "format": "{volume}% ",
+    "format-muted": ""
+  }
 }
