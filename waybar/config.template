@@ -74,6 +74,14 @@
     "tooltip-format": "{ifname} via {gwaddr}"
   },
 
+  "pulseaudio": {
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "format": "{volume}% ",
+    "format-muted": ""
+  },
+
+
 
   "custom/power": {
     "format": "",
