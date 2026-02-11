@@ -66,6 +66,29 @@ sudo pacman -S --needed --noconfirm \
 echo "==> Dependencies installed."
 echo
 
+
+echo "==> Installing yay,  mpvpaper"
+echo
+
+
+if ! command -v yay &>/dev/null; then
+    echo "==> Installing yay..."
+    sudo pacman -S --needed --noconfirm git base-devel
+    git clone https://aur.archlinux.org/yay.git /tmp/yay
+    cd /tmp/yay
+    makepkg -si --noconfirm
+    cd ~
+    rm -rf /tmp/yay
+fi
+
+echo "==> Installing mpvpaper from AUR..."
+yay -S --needed --noconfirm mpvpaper
+
+
+
+
+
+
 # ==============================
 # 2. Backup Existing Configs
 # ==============================
