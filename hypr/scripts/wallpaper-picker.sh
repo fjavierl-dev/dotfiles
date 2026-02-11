@@ -2,6 +2,7 @@
 
 WALLDIR="$HOME/.config/hypr/wallpapers"
 STATE="$HOME/.config/hypr/current_wallpaper"
+VIDEO_STATE="$HOME/.config/hypr/current_wallpaper_video"
 
 mkdir -p "$WALLDIR"
 mkdir -p "$(dirname "$STATE")"
@@ -13,10 +14,13 @@ CHOICE=$(zenity --file-selection \
 
 [ -z "$CHOICE" ] && exit 0
 
-# 🔥 Detener mpvpaper si está activo
+# 🔥 Si había video guardado, eliminarlo
+rm -f "$VIDEO_STATE"
+
+# 🔥 Matar mpvpaper si está corriendo
 pkill mpvpaper 2>/dev/null
 
-# Guardar selección (ruta relativa)
+# Guardar selección
 RELATIVE_PATH="${CHOICE#$WALLDIR/}"
 echo "$RELATIVE_PATH" > "$STATE"
 
