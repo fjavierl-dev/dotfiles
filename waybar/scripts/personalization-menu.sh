@@ -21,7 +21,7 @@ case "$choice" in
     ;;
 
   Back)
-    "$SCRIPT_DIR/personalization-menu.sh"
+    "$SCRIPT_DIR/settings-menu.sh"
     ;;
   *)
     exit 0

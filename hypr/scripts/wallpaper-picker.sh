@@ -13,10 +13,12 @@ CHOICE=$(zenity --file-selection \
 
 [ -z "$CHOICE" ] && exit 0
 
+# 🔥 Detener mpvpaper si está activo
+pkill mpvpaper 2>/dev/null
+
 # Guardar selección (ruta relativa)
 RELATIVE_PATH="${CHOICE#$WALLDIR/}"
 echo "$RELATIVE_PATH" > "$STATE"
-
 
 # Aplicar wallpaper
 swww img "$CHOICE" --transition-type any
