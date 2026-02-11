@@ -1,7 +1,7 @@
 #!/bin/bash
 SCRIPT_DIR="$(dirname "$0")"
 
-choice=$(printf "Waybar\nWaybar Layout\nKitty Theme\nKitty Transparency\nBack" | rofi -dmenu -p "Personalization")
+choice=$(printf "Waybar\nWaybar Layout\nKitty Theme\nKitty Opacity\nKitty Blur\nBack" | rofi -dmenu -p "Personalization")
 
 case "$choice" in
   Waybar)
@@ -13,11 +13,15 @@ case "$choice" in
   "Kitty Theme")
     "$SCRIPT_DIR/kitty-theme.sh"
     ;;
-  "Kitty Transparency")
+  "Kitty Opacity")
     "$SCRIPT_DIR/kitty-transparency.sh"
     ;;
+  "Kitty Blur")
+    "$SCRIPT_DIR/kitty-blur.sh"
+    ;;
+
   Back)
-    "$SCRIPT_DIR/settings-menu.sh"
+    "$SCRIPT_DIR/personalization-menu.sh"
     ;;
   *)
     exit 0

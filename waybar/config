@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 18,
+  "height": 24,
 
   "modules-left": ["custom/ws-grid"],
   "modules-center": [],

@@ -4,7 +4,6 @@
   "right": [
     "network",
     "tray",
-    "pulseaudio",
     "custom/settings",
     "custom/power"
   ]

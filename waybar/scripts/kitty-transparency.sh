@@ -1,5 +1,6 @@
 #!/bin/bash
 
+SCRIPT_DIR="$(dirname "$0")"
 CONFIG="$HOME/.config/kitty/kitty.conf"
 
 while true; do
@@ -18,17 +19,22 @@ while true; do
         "20%")  opacity="0.2" ;;
         "10%")  opacity="0.1" ;;
         "0%")   opacity="0.0" ;;
-        "Back") break ;;
-        "") break ;;
+
+        "Back")
+            "$SCRIPT_DIR/personalization-menu.sh"
+            exit 0
+            ;;
+
+        "")
+            exit 0
+            ;;
     esac
 
-    # Si existe la línea la reemplaza
     if grep -q "^background_opacity" "$CONFIG"; then
         sed -i "s/^background_opacity.*/background_opacity $opacity/" "$CONFIG"
     else
         echo "background_opacity $opacity" >> "$CONFIG"
     fi
 
-    # Recargar kitty
     killall -SIGUSR1 kitty 2>/dev/null
 done
