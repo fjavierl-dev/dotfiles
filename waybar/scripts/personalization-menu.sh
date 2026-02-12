@@ -19,7 +19,6 @@ case "$choice" in
   "Kitty Blur")
     "$SCRIPT_DIR/kitty-blur.sh"
     ;;
-
   Back)
     "$SCRIPT_DIR/settings-menu.sh"
     ;;

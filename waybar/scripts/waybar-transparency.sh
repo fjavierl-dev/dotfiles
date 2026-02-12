@@ -18,11 +18,12 @@ while true; do
         "20%")  opacity="0.2" ;;
         "10%")  opacity="0.1" ;;
         "0%")   opacity="0.0" ;;
-        "Back") break ;;
-        "") break ;;
+        "Back"|"") break ;;
     esac
 
+    # Cambiar CSS
     sed -i "s/rgba(20, 20, 20, [0-9.]\+)/rgba(20, 20, 20, $opacity)/" "$STYLE"
 
-    pkill -USR2 waybar
+    # Recargar Waybar **sin bloquear Rofi**
+    (pkill -USR2 waybar) >/dev/null 2>&1
 done
