@@ -3,6 +3,10 @@ window#waybar {
   background: rgba(20, 20, 20, 0.4);
 }
 
+
+
+
+
 /* IMPORTANTE: nada más debe tener fondo por defecto */
 #workspaces {
   background: transparent;
@@ -25,9 +29,11 @@ window#waybar {
 }
 
 
-#waybar * {
+#waybar  {
+border: 2px solid blue; 
   padding-left: 6px;
   padding-right: 6px;
+   padding: 2px; 
 }
 
 

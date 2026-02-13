@@ -1,11 +1,11 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 6,
+  "height": 18,
 
-  "modules-left": ["custom/ws-grid",    ],
-  "modules-center": [],
-  "modules-right": ["network","tray","pulseaudio","clock","custom/settings","custom/power"],
+  "modules-left": ["custom/ws-grid"],
+  "modules-center": ["clock"],
+  "modules-right": ["network","tray","pulseaudio","custom/settings","custom/power"],
 
 
 
@@ -26,7 +26,7 @@
     "on-click": "activate",
     "all-outputs": true,
     "persistent-workspaces": {
-      "*": [1, 2, 3, 4, 5, 6, 7, 8, 9] 
+      "*": [1, 2, 3, 4]
     }
 
   },
