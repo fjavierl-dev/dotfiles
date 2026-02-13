@@ -2,6 +2,20 @@
 
 CSS_FILE="$HOME/.config/waybar/style.css"
 
+# Función para validar color CSS (hex #RRGGBB o nombres CSS comunes)
+is_valid_color() {
+    local c="$1"
+    # Hex #RRGGBB
+    if [[ "$c" =~ ^#([0-9a-fA-F]{6})$ ]]; then
+        return 0
+    fi
+    # Nombres CSS comunes
+    case "$c" in
+        transparent|red|green|blue|white|yellow|purple) return 0 ;;
+        *) return 1 ;;
+    esac
+}
+
 # 1️⃣ Elegir el color de borde / Hyprland
 color_choice=$(printf "Transparent\nRed\nGreen\nBlue\nWhite\nYellow\nPurple\nCustom (convinated 2 colors)\nBack" | \
   rofi -dmenu -p "Active Border Color")
@@ -49,6 +63,12 @@ case "$color_choice" in
     [ -z "$waybar_color" ] && waybar_color="$custom_color"
 
     color_css="$waybar_color"
+
+    # Validar solo si es Custom
+    if ! is_valid_color "$color_css"; then
+        echo "Color inválido para Waybar: $color_css. Se usará fallback #303030."
+        color_css="#303030"
+    fi
     ;;
   Back)
     ~/.config/waybar/scripts/personalization-menu.sh
