@@ -13,6 +13,15 @@ A minimal, structured and productivity-focused Hyprland setup for Arch Linux.
 
 ---
 
+
+## Video Preview
+
+[![Watch the video](https://img.youtube.com/vi/Jrcreo8ihBo/maxresdefault.jpg)](https://www.youtube.com/watch?v=Jrcreo8ihBo)
+
+▶ Click to watch on YouTube
+
+
+
 ## Installation
 
 ```bash
