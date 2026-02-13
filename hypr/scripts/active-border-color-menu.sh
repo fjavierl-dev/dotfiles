@@ -17,7 +17,7 @@ is_valid_color() {
 }
 
 # 1️⃣ Elegir el color de borde / Hyprland
-color_choice=$(printf "Transparent\nRed\nGreen\nBlue\nWhite\nYellow\nPurple\nCustom (convinated 2 colors)\nBack" | \
+color_choice=$(printf "Transparent\nRed\nGreen\nBlue\nWhite\nYellow\nPurple\nCustom (single color)\nCustom (convinated 2 colors)\nBack" | \
   rofi -dmenu -p "Active Border Color")
 [ -z "$color_choice" ] && exit 0
 
@@ -49,6 +49,22 @@ case "$color_choice" in
   Purple)
     color_css="purple"
     color_rgba="rgba(aa00ffff)"
+    ;;
+  "Custom (single color)")
+    single_color=$(rofi -dmenu -p $'Enter custom color:\n(Example: #3B4A61)')
+    [ -z "$single_color" ] && exit 0
+
+    # Validar formato HEX
+    if [[ ! "$single_color" =~ ^#([0-9a-fA-F]{6})$ ]]; then
+        rofi -e "Invalid format. Use #RRGGBB"
+        exit 0
+    fi
+
+    color_css="$single_color"
+
+    # Convertir a formato Hyprland rgba(RRGGBBff)
+    hex="${single_color#\#}"
+    color_rgba="rgba(${hex}ff)"
     ;;
   "Custom (convinated 2 colors)")
     # Pedir color/gradiente para Hyprland
