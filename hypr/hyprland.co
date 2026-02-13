@@ -14,9 +14,7 @@ general {
 
 
 decoration {
-	active_opacity = 1.0
-	inactive_opacity = 1.0
-    rounding = 7
+    rouding = 4
     blur {
         enabled = true
         size = 4
@@ -128,7 +126,6 @@ bind = SUPER SHIFT, left,  movefocus, l
 bind = SUPER SHIFT, right, movefocus, r
 bind = SUPER SHIFT, up,    movefocus, u
 bind = SUPER SHIFT, down,  movefocus, d
-
 
 
 
