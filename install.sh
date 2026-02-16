@@ -61,15 +61,14 @@ sudo pacman -S --needed --noconfirm \
   gnome-keyring \
   zenity \
   cava \
-  wl-clipboard
+  wl-clipboard \
+  libnotify   # <-- agregado
 
 echo "==> Dependencies installed."
 echo
 
-
 echo "==> Installing yay,  mpvpaper"
 echo
-
 
 if ! command -v yay &>/dev/null; then
     echo "==> Installing yay..."
@@ -83,11 +82,6 @@ fi
 
 echo "==> Installing mpvpaper from AUR..."
 yay -S --needed --noconfirm mpvpaper
-
-
-
-
-
 
 # ==============================
 # 2. Backup Existing Configs
@@ -129,10 +123,10 @@ echo "==> Enabling PipeWire services..."
 systemctl --user enable pipewire pipewire-pulse wireplumber
 echo "==> Enabling Bluetooth..."
 sudo systemctl enable bluetooth
-systemctl --user enable swww
+echo "==> Ensuring swww-daemon runs..."
+pgrep -x swww-daemon >/dev/null || systemctl --user enable --now swww
 
 echo
-
 
 # ==============================
 # 5. Download Themes
@@ -160,7 +154,6 @@ else
 fi
 
 echo
-
 
 echo "==> Installation complete."
 echo "==> Reboot or start Hyprland to apply changes."
