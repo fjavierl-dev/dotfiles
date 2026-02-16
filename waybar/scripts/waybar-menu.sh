@@ -1,20 +1,32 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Waybar Personalization Menu
+
 SCRIPT_DIR="$(dirname "$0")"
 
-choice=$(printf "Position\nSize\nOpacity\nBack" | rofi -dmenu -p "Waybar")
+# Menú principal (Añadimos Style)
+choice=$(printf "Style\nPosition\nSize\nWaybar Margin\nBlur\nOpacity\nBack" | rofi -dmenu -p "Waybar")
 
 case "$choice" in
-  Position)
-    "$SCRIPT_DIR/waybar-position.sh"
+  "Style")
+    bash "$SCRIPT_DIR/waybar-style.sh"
     ;;
-  Size)
-    "$SCRIPT_DIR/waybar-height.sh"
+  "Position")
+    bash "$SCRIPT_DIR/waybar-position.sh"
     ;;
-  Opacity)
-    "$SCRIPT_DIR/waybar-transparency.sh"
+  "Size")
+    bash "$SCRIPT_DIR/waybar-height.sh"
     ;;
-  Back)
-    "$SCRIPT_DIR/personalization-menu.sh"
+  "Waybar Margin")
+    bash "$SCRIPT_DIR/waybar-margin.sh"
+    ;;
+  "Blur")
+    bash "$SCRIPT_DIR/waybar-blur.sh"
+    ;;
+  "Opacity")
+    bash "$SCRIPT_DIR/waybar-transparency.sh"
+    ;;
+  "Back")
+    bash "$SCRIPT_DIR/personalization-menu.sh"
     ;;
   *)
     exit 0

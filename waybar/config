@@ -1,11 +1,11 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 18,
+  "height": 6,
 
   "modules-left": ["custom/ws-grid"],
-  "modules-center": ["clock"],
-  "modules-right": ["network","tray","pulseaudio","custom/settings","custom/power"],
+  "modules-center": [],
+  "modules-right": ["network","tray","pulseaudio","clock","custom/settings","custom/power"],
 
 
 

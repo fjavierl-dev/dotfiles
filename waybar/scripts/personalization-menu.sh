@@ -1,7 +1,7 @@
 #!/bin/bash
 SCRIPT_DIR="$(dirname "$0")"
 
-choice=$(printf "Waybar\nWaybar Layout\nKitty Theme\nKitty Opacity\nKitty Blur ON OFF\n[BREAK]Kitty Blur Level\nBorder Size\nActive Border Color\nInactive Border Color\nInner Gaps\nOuter Gap\nHyprland Active Opacity\nHyprland Inactive Opacity\nBack" | rofi -dmenu -p "Personalization")
+choice=$(printf "Waybar\nWaybar Layout\nKitty Theme\nKitty Opacity\nKitty Blur ON OFF\n[BREAK]Kitty Blur Level\nBorder Size\nWindow Corners\nActive Border Color\nInactive Border Color\nInner Gaps\nOuter Gap\nHyprland Active Opacity\nHyprland Inactive Opacity\nOther Options (scrollable)...\nChange Fastfetch Logo\nChange Fastfetch Style\nBack" | rofi -dmenu -p "Personalization")
 
 case "$choice" in
   Waybar)
@@ -28,6 +28,9 @@ case "$choice" in
   "Active Border Color")
     ~/.config/hypr/scripts/active-border-color-menu.sh
     ;;
+  "Window Corners")
+    ~/.config/hypr/scripts/window-corners.sh
+    ;;
   "Inactive Border Color")
     ~/.config/hypr/scripts/inactive-border-color-menu.sh
     ;;
@@ -42,6 +45,12 @@ case "$choice" in
     ;;
   "Hyprland Inactive Opacity")
     "$SCRIPT_DIR/inactive-opacity.sh"
+    ;;
+   "Change Fastfetch Logo")
+    ~/.config/hypr/scripts/change-fastfetch-logo.sh
+    ;;
+   "Change Fastfetch Style")
+    ~/.config/hypr/scripts/change-fastfetch-style.sh
     ;;
   Back)
     "$SCRIPT_DIR/settings-menu.sh"
