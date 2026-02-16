@@ -1,7 +1,7 @@
 #!/bin/bash
 SCRIPT_DIR="$(dirname "$0")"
 
-choice=$(printf "Position\nSize\nOpacity\nBack" | rofi -dmenu -p "Waybar")
+choice=$(printf "Position\nSize\nWaybar Margin\nOpacity\nBack" | rofi -dmenu -p "Waybar")
 
 case "$choice" in
   Position)
@@ -9,6 +9,9 @@ case "$choice" in
     ;;
   Size)
     "$SCRIPT_DIR/waybar-height.sh"
+    ;;
+"Waybar Margin")
+    ~/.config/waybar/scripts/waybar-margin.sh
     ;;
   Opacity)
     "$SCRIPT_DIR/waybar-transparency.sh"
