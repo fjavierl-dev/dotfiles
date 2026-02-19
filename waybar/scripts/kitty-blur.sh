@@ -17,7 +17,7 @@ while true; do
             hyprctl reload
             ;;
         "Back")
-            "$SCRIPT_DIR/personalization-menu.sh"
+            "$SCRIPT_DIR/kitty-menu.sh"
             exit 0
             ;;
         "")

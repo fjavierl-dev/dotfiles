@@ -16,7 +16,7 @@ is_valid_color() {
     esac
 }
 
-# 1️⃣ Elegir el color de borde / Hyprland
+#legir el color de borde / Hyprland
 color_choice=$(printf "Transparent\nRed\nGreen\nBlue\nWhite\nYellow\nPurple\nCustom (single color)\nCustom (convinated 2 colors)\nBack" | \
   rofi -dmenu -p "Active Border Color")
 [ -z "$color_choice" ] && exit 0
@@ -87,15 +87,15 @@ case "$color_choice" in
     fi
     ;;
   Back)
-    ~/.config/waybar/scripts/personalization-menu.sh
+    ~/.config/waybar/scripts/hyprland-menu.sh
     exit 0
     ;;
 esac
 
-# 2️⃣ Cambiar el borde activo de la ventana en Hyprland
+#ambiar el borde activo de la ventana en Hyprland
 hyprctl keyword general:col.active_border "$color_rgba"
 
-# 3️⃣ Elegir estilo de Waybar
+#legir estilo de Waybar
 style_choice=$(printf "Border Style 1\nNo Border" | rofi -dmenu -p "Waybar Theme Style")
 [ -z "$style_choice" ] && exit 0
 
@@ -108,6 +108,6 @@ case "$style_choice" in
     ;;
 esac
 
-# 4️⃣ Reiniciar Waybar
+#einiciar Waybar
 pkill waybar
 waybar &

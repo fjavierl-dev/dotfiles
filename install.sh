@@ -57,6 +57,7 @@ sudo pacman -S --needed --noconfirm \
   bluez-utils \
   blueman \
   kitty \
+  fastfetch \ 
   cmatrix \
   gnome-keyring \
   zenity \

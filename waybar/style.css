@@ -1,11 +1,7 @@
-/* Fondo general de la barra */
+/* Fondo general de la barra - MANTENEMOS LA OPACIDAD */
 window#waybar {
   background: rgba(20, 20, 20, 0.4);
 }
-
-
-
-
 
 /* IMPORTANTE: nada más debe tener fondo por defecto */
 #workspaces {
@@ -24,43 +20,26 @@ window#waybar {
 }
 
 #custom-rofi-theme {
-  padding: 4px 8px;
+  padding: 2px 4px; /* Reducido */
   font-size: 13px;
 }
 
-
-#waybar  {
-border: none; 
-  padding-left: 6px;
-  padding-right: 6px;
-   padding: 2px; 
+/* Contenedor principal */
+#waybar {
+  border: none; 
+  padding: 2px; 
 }
 
-
-
+/* Reducción de espacio en módulos específicos */
 #custom-settings {
-    font-size: 22px;
-    padding: 0 6px;
+    font-size: 20px; /* Un pelín más pequeño para ajustar */
+    padding: 0 4px;  /* Reducido de 6 a 4 */
 }
-
-
-/* ===== GRID 2x2 ===== */
-#custom-ws-grid {
-  background: transparent;
-  color: #ffffff;
-  font-family: monospace;
-  font-size: 11px;
-  padding: 2px 4px;
-  margin: 0 6px;
-}
-
-
-/* custom power */
 
 #custom-power {
   color: #f38ba8; 
-  font-size: 22px;
-  padding: 0 10px;
+  font-size: 20px;   /* Un pelín más pequeño */
+  padding: 0 6px;    /* Reducido de 10 a 6 */
 }
 
 #custom-power:hover {
@@ -68,27 +47,32 @@ border: none;
   border-radius: 6px;
 }
 
+/* ===== GRID 2x2 ===== */
+#custom-ws-grid {
+  background: transparent;
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 11px;
+  padding: 2px 2px; /* Reducido */
+  margin: 0 4px;    /* Reducido de 6 a 4 */
+}
 
+/* Espaciado para el resto de módulos (Reloj, Batería, etc.) */
+/* Añadimos esto para que no estén tan separados por defecto */
+#clock, #battery, #pulseaudio, #network, #cpu, #memory, #tray {
+    padding: 0 4px; 
+}
 
-
-/* cada cuadrado */
+/* cada cuadrado del grid */
 #custom-ws-grid button {
   min-width: 10px;
   min-height: 10px;
-
-  margin: 2px;     /* ← ESTE es el spacing real */
+  margin: 1px;     /* Reducido de 2 a 1 */
   padding: 0;
-
   border-radius: 2px;
   background: rgba(255,255,255, 0.4);
 }
 
-/* activo */
 #custom-ws-grid button.active {
-  background: rgba(255,255,255, 0.4);
-}
-
-/* hover */
-#custom-ws-grid button:hover {
   background: rgba(255,255,255, 0.4);
 }

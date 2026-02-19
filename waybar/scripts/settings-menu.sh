@@ -2,7 +2,7 @@
 SCRIPT_DIR="$(dirname "$0")"
 
 
-option=$(printf "Keybindings\nPersonalization\nWorkspaces\nWallpaper Selection\nChange Rofi Theme\nAbout" | rofi -dmenu -p "Settings")
+option=$(printf "Keybindings\nPersonalization\nWorkspaces\nWallpaper Selection\nChange Rofi Theme\nSystem\nAbout" | rofi -dmenu -p "Settings")
 
 case "$option" in
   Keybindings)
@@ -19,6 +19,9 @@ case "$option" in
     ;;
   "Change Rofi Theme")
     "$SCRIPT_DIR/rofi-theme-selector.sh"
+    ;;
+   "System")
+    "$HOME/.config/hypr/scripts/system-menu.sh"
     ;;
 "About")
     "$SCRIPT_DIR/menu-about.sh"

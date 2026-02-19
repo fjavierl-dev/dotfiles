@@ -21,10 +21,9 @@ while true; do
         "0%")   opacity="0.0" ;;
 
         "Back")
-            "$SCRIPT_DIR/personalization-menu.sh"
+            "$SCRIPT_DIR/kitty-menu.sh"
             exit 0
             ;;
-
         "")
             exit 0
             ;;

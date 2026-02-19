@@ -31,6 +31,6 @@ case "$choice" in
     hyprctl keyword general:col.inactive_border "rgba(aa00ffaa)"
     ;;
   Back)
-    ~/.config/waybar/scripts/personalization-menu.sh
+    ~/.config/waybar/scripts/hyprland-menu.sh
     ;;
 esac

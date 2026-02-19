@@ -4,9 +4,12 @@
 SCRIPT_DIR="$(dirname "$0")"
 
 # Menú principal (Añadimos Style)
-choice=$(printf "Style\nPosition\nSize\nWaybar Margin\nWaybar Side Padding\nBlur\nOpacity\nBack" | rofi -dmenu -p "Waybar")
+choice=$(printf "Layout\nStyle\nPosition\nSize\nWaybar Margin\nWaybar Side Padding\nBlur\nOpacity\nBack" | rofi -dmenu -p "Waybar")
 
 case "$choice" in
+  "Layout")
+    "$SCRIPT_DIR/waybar-layout.sh"
+    ;;
   "Style")
     bash "$SCRIPT_DIR/waybar-style.sh"
     ;;
@@ -19,7 +22,7 @@ case "$choice" in
   "Waybar Margin")
     bash "$SCRIPT_DIR/waybar-margin.sh"
     ;;
- "Waybar Side Padding")
+  "Waybar Side Padding")
     bash "$SCRIPT_DIR/waybar-side-padding.sh"
     ;;
   "Blur")
