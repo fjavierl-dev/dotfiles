@@ -1,7 +1,7 @@
 #!/bin/bash
 SCRIPT_DIR="$(dirname "$0")"
 
-choice=$(printf "Border Size\nWindow Corners\nActive Border Color\nInactive Border Color\nInner Gaps\nOuter Gaps\nActive Opacity\nInactive Opacity\nBack" | rofi -dmenu -p "Personalization")
+choice=$(printf "Border Size\nWindow Corners\nToggle Animations\nActive Border Color\nInactive Border Color\nInner Gaps\nOuter Gaps\nActive Opacity\nInactive Opacity\nBack" | rofi -dmenu -p "Personalization")
 
 case "$choice" in
   "Border Size")
@@ -12,6 +12,9 @@ case "$choice" in
     ;;
   "Window Corners")
     ~/.config/hypr/scripts/window-corners.sh
+    ;;
+  "Toggle Animations")
+    ~/.config/hypr/scripts/toggle-animations.sh
     ;;
   "Inactive Border Color")
     ~/.config/hypr/scripts/inactive-border-color-menu.sh

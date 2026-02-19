@@ -9,11 +9,11 @@ while true; do
 
     case "$choice" in
         "Enable Blur")
-            sed -i 's/enabled = false/enabled = true/' "$HYPR"
+            sed -i '/blur {/,/}/ s/enabled = false/enabled = true/' "$HYPR"
             hyprctl reload
             ;;
         "Disable Blur")
-            sed -i 's/enabled = true/enabled = false/' "$HYPR"
+            sed -i '/blur {/,/}/ s/enabled = true/enabled = false/' "$HYPR"
             hyprctl reload
             ;;
         "Back")
