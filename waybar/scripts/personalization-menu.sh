@@ -1,7 +1,7 @@
 #!/bin/bash
 SCRIPT_DIR="$(dirname "$0")"
 
-choice=$(printf "Waybar\nKitty\nHyprland\nFastfetch\nBack" | rofi -dmenu -p "Personalization")
+choice=$(printf "Waybar\nKitty\nCava Colors\nHyprland\nFastfetch\nBack" | rofi -dmenu -p "Personalization")
 
 case "$choice" in
   Waybar)
@@ -9,6 +9,9 @@ case "$choice" in
     ;;
   "Kitty")
     "$SCRIPT_DIR/kitty-menu.sh"
+    ;;
+  "Cava Colors")
+    "$HOME/.config/hypr/scripts/cava-colors-menu.sh"
     ;;
   "Hyprland")
     "$SCRIPT_DIR/hyprland-menu.sh"
