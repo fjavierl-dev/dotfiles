@@ -4,6 +4,7 @@ Clean UI and workflow optimization.
 
 A minimal, structured and productivity-focused Hyprland setup for Arch Linux.
 
+IMPORTANT: this working project will be continued in my other FR Dotfiles repository (AGS), [fjavierl FR]
 ---
 
 ## Screenshots

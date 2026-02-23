@@ -56,6 +56,7 @@ sudo pacman -S --needed --noconfirm \
   bluez \
   bluez-utils \
   blueman \
+  gsimplecal \
   kitty \
   fastfetch \ 
   cmatrix \
