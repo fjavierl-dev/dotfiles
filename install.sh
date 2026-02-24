@@ -87,7 +87,12 @@ echo
 # ==============================
 mkdir -p "$HOME/.config"
 
-for cfg in waybar hypr; do
+# ==============================
+# 5. Backup Existing Configs
+# ==============================
+mkdir -p "$HOME/.config"
+
+for cfg in waybar hypr gsimplecal; do  # <--- Agregamos gsimplecal aquí
     if [ -d "$HOME/.config/$cfg" ]; then
         echo "==> Backing up existing $cfg config..."
         mv "$HOME/.config/$cfg" "$HOME/.config/${cfg}.backup.$(date +%Y%m%d-%H%M%S)"
@@ -103,6 +108,9 @@ cp -r "$REPO_DIR/waybar" "$HOME/.config/"
 
 echo "==> Copying Hypr config..."
 cp -r "$REPO_DIR/hypr" "$HOME/.config/"
+
+echo "==> Copying gsimplecal config..."
+cp -r "$REPO_DIR/gsimplecal" "$HOME/.config/"  # <--- Esta línea es la clave
 echo
 
 # ==============================
