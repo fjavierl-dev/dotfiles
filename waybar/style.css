@@ -1,58 +1,78 @@
-/* 1. Base transparente */
+/* Fondo general de la barra - MANTENEMOS LA OPACIDAD */
 window#waybar {
-    background: transparent;
-    font-family: "JetBrainsMono Nerd Font", "Roboto", sans-serif;
+  background: rgba(20, 20, 20, 0.4);
 }
 
-/* 2. Las Cápsulas */
-.modules-left,
-.modules-right {
-    background: rgba(20, 20, 20, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 2px 10px; /* Reducido para que no se vea tan gorda */
-    margin: 5px 10px;
+/* IMPORTANTE: nada más debe tener fondo por defecto */
+#workspaces {
+  background: transparent;
 }
 
-/* 3. Tamaño de los módulos */
-#workspaces,
-#clock,
-#battery,
-#pulseaudio,
-#network,
-#cpu,
-#memory,
-#tray,
-#custom-power,
-#custom-settings,
-#custom-ws-grid {
-    background: transparent;
-    border: none;
-    margin: 0;
-    padding: 0 6px;
-    /* TAMAÑO AJUSTADO */
-    font-size: 14px; 
-}
-
-/* 4. Ajuste para Workspaces */
 #workspaces button {
-    font-size: 14px;
-    padding: 0 4px;
-    color: #ffffff;
+  background: transparent;
 }
 
+/* SOLO el activo se resalta */
 #workspaces button.active {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 6px;
+  background: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  border-radius: 6px;
 }
 
-/* 5. Iconos de sistema un pelín más grandes que el texto */
-#custom-power, #custom-settings {
-    font-size: 16px;
+#custom-rofi-theme {
+  padding: 2px 4px; /* Reducido */
+  font-size: 13px;
 }
 
-/* 6. Ajuste para el Grid 2x2 */
+/* Contenedor principal */
+#waybar {
+  border: none; 
+  padding: 2px; 
+}
+
+/* Reducción de espacio en módulos específicos */
+#custom-settings {
+    font-size: 20px; /* Un pelín más pequeño para ajustar */
+    padding: 0 4px;  /* Reducido de 6 a 4 */
+}
+
+#custom-power {
+  color: #f38ba8; 
+  font-size: 20px;   /* Un pelín más pequeño */
+  padding: 0 6px;    /* Reducido de 10 a 6 */
+}
+
+#custom-power:hover {
+  background: rgba(243, 139, 168, 0.4);
+  border-radius: 6px;
+}
+
+/* ===== GRID 2x2 ===== */
+#custom-ws-grid {
+  background: transparent;
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 11px;
+  padding: 2px 2px; /* Reducido */
+  margin: 0 4px;    /* Reducido de 6 a 4 */
+}
+
+/* Espaciado para el resto de módulos (Reloj, Batería, etc.) */
+/* Añadimos esto para que no estén tan separados por defecto */
+#clock, #battery, #pulseaudio, #network, #cpu, #memory, #tray {
+    padding: 0 4px; 
+}
+
+/* cada cuadrado del grid */
 #custom-ws-grid button {
-    background: rgba(255, 255, 255, 0.4);
-    margin: 1.5px;
+  min-width: 10px;
+  min-height: 10px;
+  margin: 1px;     /* Reducido de 2 a 1 */
+  padding: 0;
+  border-radius: 2px;
+  background: rgba(255,255,255, 0.4);
+}
+
+#custom-ws-grid button.active {
+  background: rgba(255,255,255, 0.4);
 }

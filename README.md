@@ -4,7 +4,6 @@ Clean UI and workflow optimization.
 
 A minimal, structured and productivity-focused Hyprland setup for Arch Linux.
 
-IMPORTANT: this working project will be continued in my other FR Dotfiles repository (AGS), [fjavierl FR]
 ---
 
 ## Screenshots
@@ -26,7 +25,7 @@ IMPORTANT: this working project will be continued in my other FR Dotfiles reposi
 ## Installation
 
 ```bash
-git clone https://github.com/fjavierl/dotfiles.git
-cd dotfiles
+git clone https://github.com/fjavierl-dev/dotfiles.git ~/dotfiles
+cd ~/dotfiles
 chmod +x install.sh
 ./install.sh
